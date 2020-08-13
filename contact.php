@@ -8,14 +8,11 @@
         
         
         $to = "victoriaeugenia2018@gmail.com";
-        $headers = "New Inquiry from Personal website: ".$name;
         
         $email_subject = "New Inquiry from Personal website";
-        $email_body = "User Name: ".$name."\n".
-                        "User Email: ".$visitor_email."\n".
-                            "User Message: " .$message."\n";
+        $email_body = "User Name: ".$name."\nUser Email: ".$visitor_email."\n User Message: " .$message."\n";
         
-        mail($to, $email_subject, $email_body, $headers);
+        mail($to, $email_subject, $email_body);
         header("Location: contact.html?mailsend");
     }
 
